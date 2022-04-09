@@ -1,4 +1,4 @@
-package com.example.protobufrockset;
+package com.tylrd;
 
 import com.tylrd.model.Person;
 import org.springframework.boot.SpringApplication;
