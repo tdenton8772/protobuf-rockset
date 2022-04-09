@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.tylrd.model";
+option java_outer_classname = "Models";
+
+message Person {
+  string name = 1;
+}

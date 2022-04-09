@@ -1,0 +1,35 @@
+plugins {
+  id 'java'
+  id 'idea'
+  id "com.google.protobuf" version "0.8.18"
+  id 'org.springframework.boot' version '2.6.6'
+  id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+  id 'com.diffplug.spotless' version '6.4.2'
+}
+
+group = 'com.tylrd'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  implementation platform('com.google.cloud:spring-cloud-gcp-dependencies:3.1.0')
+  implementation 'org.springframework.boot:spring-boot-starter-web'
+  implementation 'com.google.cloud:spring-cloud-gcp-starter-logging'
+
+  testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+spotless {
+  java {
+    removeUnusedImports()
+    googleJavaFormat()
+  }
+}
+
+test {
+  useJUnitPlatform()
+}
