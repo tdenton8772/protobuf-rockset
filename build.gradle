@@ -16,9 +16,9 @@ repositories {
 }
 
 dependencies {
-  implementation platform('com.google.cloud:spring-cloud-gcp-dependencies:3.1.0')
   implementation 'org.springframework.boot:spring-boot-starter-web'
-  implementation 'com.google.cloud:spring-cloud-gcp-starter-logging'
+  implementation 'com.google.protobuf:protobuf-java:3.19.2'
+  implementation 'com.google.protobuf:protobuf-java-util:3.19.2'
 
   testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
