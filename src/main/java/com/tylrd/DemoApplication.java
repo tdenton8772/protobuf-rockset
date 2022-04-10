@@ -32,6 +32,7 @@ public class DemoApplication {
 
     @PostMapping(value = "/", produces = "application/json")
     ResponseEntity<Person> createPerson(@RequestBody Person person) {
+      DemoRockset d = new DemoRockset();
       Person p = Person.newBuilder().setName(person.getName()).build();
       return ResponseEntity.ok(p);
     }
